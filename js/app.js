@@ -55,10 +55,26 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+  let mySumArray = sum(a, b);
+  let useSum = mySumArray[0];
+
+  let mySumArray2 = multiply(a, b);
+  let myMultiply = mySumArray2[0];
+
+  let mySum3 = sum(useSum, c);
+  let theAnswer = mySum3[0];
+
+  let mySumThree = multiply(myMultiply, c);
+  let theAnswer2 = mySumThree[0];
+
+  let myString3 = `${a} and ${b} and ${c} sum to ${theAnswer}.`;
+  let myStringThree = `The product of ${a} and ${b} and ${c} is ${theAnswer2}.`;
+
+  return [theAnswer, theAnswer2, myString3, myStringThree];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+  testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
